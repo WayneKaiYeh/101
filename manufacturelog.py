@@ -19,17 +19,15 @@ def validate_and_extract_log(s):
     #create a list
     batches_info = []
 
-    #Strep1: we separate the batches
+    #Step1: we separate the batches
     batches = separate_batches(s)
 
-    
     #Loop through all the batches
     for batch in batches:
         dict = {}
 
         #get the prefix
         prefix = batch[0]
-
 
         #batch id
         batch_id = batch[1:5]
@@ -51,28 +49,21 @@ def validate_and_extract_log(s):
         else:
             date = None
 
-        #now we check the validation
-            
 
+        #now we check the validation
         if prefix != 'B':
             # If not 'B', return "Invalid" and skip to the next batch
             return "Invalid"
             #continue
 
 
-            ########################
+        elif (len(batch_id) != 4 and  batch_id.isdigit() != True):
+            return "Invalid"
+
         
-
-
-
-
-            
-
-
     return batches
 
 
     #return batches_info or "invalid"
-
 
 
