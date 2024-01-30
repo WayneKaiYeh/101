@@ -58,6 +58,9 @@ def validate_and_extract_log(s):
             # If not 'B', return "Invalid" and skip to the next batch
             return "Invalid"
             #continue
+
+
+            ########################
         
 
 
