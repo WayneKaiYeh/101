@@ -9,8 +9,12 @@ def separate_batches(s):
              #if the pattern is recognnised
             if i != batch_start: 
                 #if the current i is different from the batch_start, meaning it is a new batch start
-                batches.append(s[batch_start:i]) #we append a new batch inn the list
-            batch_start = i #updates batch_start to the current index i. This marks the beginning of the new batch.
+
+                #we append a new batch inn the list
+                batches.append(s[batch_start:i]) 
+                
+            #updates batch_start to the current index i. This marks the beginning of the new batch.
+            batch_start = i 
     
     batches.append(s[batch_start:])  # Add the last batch
     return batches
