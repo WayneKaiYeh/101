@@ -26,7 +26,10 @@ def separate_batches(s):
 
 
 def validate_and_extract_log(s):
-    batches_info = []  # create a list
+    if not s:
+        return "invalid"
+    
+    batches_info = []  
 
     batches = separate_batches(s)  #we separate the batches
 
